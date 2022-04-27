@@ -10,6 +10,7 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 # options.headless = True
 driver = webdriver.Chrome(options=options)
 driver.get("https://www.github.com/")
+# L login button yetkhabba ki tebda l fentre sghira donc hawka nkabbarha
 driver.set_window_size(1200, 800)
 
 # Home page
@@ -32,8 +33,10 @@ for i in pwd:
 sign_in_button = driver.find_element(By.XPATH, '/html/body/div[3]/main/div/div[4]/form/div/input[12]')
 sign_in_button.click()
 
+# nestanna l page tdour
 time.sleep(5)
 
+# ken nalka l banenr mte3 l'erreur nkoul echec, sinn c bn
 try:
     print('here')
     driver.find_element(By.XPATH, '/html/body/div[3]/main/div/div[2]')
