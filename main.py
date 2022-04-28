@@ -4,10 +4,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
+print('lodaing')
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-# options.headless = True
+# options.headless = True # khabbi l fenetre
 driver = webdriver.Chrome(options=options)
 driver.get("https://www.github.com/")
 # L login button yetkhabba ki tebda l fentre sghira donc hawka nkabbarha
@@ -20,6 +21,8 @@ login_button.click()
 # Login page
 email = str(input("Email: "))
 pwd = str(input("MDP: "))
+
+print('loading')
 
 email_field = driver.find_element(By.XPATH, '/html/body/div[3]/main/div/div[4]/form/input[2]')
 password_field = driver.find_element(By.XPATH, '/html/body/div[3]/main/div/div[4]/form/div/input[1]')
